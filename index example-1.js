@@ -84,7 +84,7 @@ console.log(fruits);
 console.log(fruits.split(','));//split by comma as on their own strings
 
 //---------arrays--------------//
-let fruitsArray = ['banana','orange','pineapple'];
+let fruitsArrays = ['banana','orange','pineapple'];
 let fruitsArray = new Array('banana','orange','pineapple');
 
 console.log(fruitsArray[2]); // access values at index 2nd
@@ -98,6 +98,64 @@ console.log(fruitsArray, fruitsArray.pop(), fruitsArray);
 //push();--->adding something new item
 console.log(fruitsArray, fruitsArray.push("blackberry"), fruitsArray);
 
+let vegetable = ['carrots','potato','tomato','broccali'];
+let allGroceries = fruitsArray.concat(vegetable); //combining arrays
+console.log(allGroceries);
+console.log(allGroceries.slice(1,4));
+console.log(allGroceries.reverse());
+
+let someNumbers = [3,5,67,78,11,23,43,678,44,10,23,43,54,45];
+console.log(someNumbers.sort(function(a,b){return a-b}));//increasing order
+console.log(someNumbers.sort(function(a,b){return b-a}));//decreasing order
+
+let emptyArray = new Array();
+for(let num = 0; num <= 10; num++){
+  emptyArray.push(num);
+}
+console.log(emptyArray);
+
+//-----------objects in javascript---------//
+let student = {
+      first :'nanduni', 
+      last : 'kaveesha', 
+      age:23,
+      height:1.34,
+      studentInfo: function(){
+        return "student info: "+this.first+"\n"+this.last+"\n"+this.age;
+      }
+};
+console.log(student.first);//get value
+student.first='rerere';//change value
+console.log(student.first);
+console.log(student.studentInfo());
+
+//---------conditionals, control flows (if else)-------//
+//18 - 35 are my target demographic
+var age =34;
+if((age >= 18)&&(age <= 35)){
+  status = 'target demo';
+}else{
+  status = 'not my audience';
+}console.log(status);
+
+//switch statement
+//differentiate between weekday vs. weekend
+// 0 --> sunday
+// 6 --> saturday
+
+switch(6){
+case 0:
+ text = 'weekend';
+ break;
+ case 6:
+   text = 'weekend';
+   break;
+   default:
+     text = 'weekday';
+}
+console.log(text);
+
+//--------json-----------//
 
 
 

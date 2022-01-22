@@ -11,7 +11,23 @@
     console.log("hello");
   </script> -->
   <p id="someText"></p>
-
+  
   <script src="index example-1.js"></script>
+
+  <script>
+    let students = `[
+      {
+        "name":"Qazi",
+        "age":25,
+        "height":170
+      },
+      {
+        "name":"Rafeh",
+        "age":24,
+        "height":100
+      }
+    ]`
+    console.log(JSON.parse(students)[1].age);
+  </script>
 </body>
 </html>
