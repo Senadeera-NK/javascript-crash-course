@@ -1,0 +1,48 @@
+body{
+  margin: 0;
+}
+.container-1{
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 75%;
+}
+.flex-box-container-1{
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  flex-wrap:wrap;/*when we have things to wrap*/
+  flex-direction:row;/*clarify the flex direction*/
+  justify-content: space-around;
+}
+.flex-box-container-1 div{
+  display: flex;
+  padding: 10px;
+  border: 1px solid black;
+  align-items: center;
+}
+
+/*-----------buttons--------------*/
+.btn-btn-primary{
+  width:flex;
+  padding:10px;
+  text-align:center;
+  border-radius: 10px;
+  border:2px solid #fff;
+  color:#fff;
+  background-color: rgb(59, 59, 241);
+}
+.btn-btn-primary:hover{
+  background-color: rgb(42, 42, 224);
+}
+.btn-btn-danger{
+  width:flex;
+  padding:10px;
+  text-align:center;
+  border-radius: 10px;
+  border:2px solid #fff;
+  color:#fff;
+  background-color:red;
+}
+.btn-btn-danger:hover{
+  background-color:rgb(235, 3, 3);
+}
