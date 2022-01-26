@@ -1,3 +1,63 @@
-function rpsGameFunction(){
-  
+function rpsGameFunction(yourChoice){
+  //console.log(yourChoice.id);//we have reference/access to that object
+ var humanChoice, botChoice;
+ humanChoice = yourChoice.id;
+
+ botChoice = numberToChoice(randomRpsInt());
+result = decideWinner(humanChoice,botChoice);// [1,0],[0,1],[0.5,0.5]
+
+message = finalMessage(result);//'you won'(returns an object)('message':'you won','color':'red')
+console.log(message);
+rpsFrontEnd(yourChoice,botChoice,message);//front end after human choice
+}
+
+function randomRpsInt(){
+  return Math.floor(Math.random()*3);
+}
+
+function numberToChoice(number){
+  return ['rock','paper','scissor'][number];
+}
+
+function decideWinner(yourChoice,computerChoice){
+  var rpsDatabase = {
+    'rock':{'scissor':1,'rock':0.5,'paper':0},
+    'paper':{'rock':1,'paper':0.5,'scissor':0},
+    'scissor':{'rock':0,'paper':1,'scissor':0.5}
+  }
+
+  var yourScore = rpsDatabase[yourChoice][computerChoice];//ex:- myChoice = 'rock', computerChoice = 'scissor','rock' => 'scissor' = 1;
+  var computerScore = rpsDatabase[computerChoice][yourChoice];
+  return [yourScore,computerScore];
+}
+
+function finalMessage([yourScore,computerScore]){
+  if(yourScore === 0){
+      return {'message':'you lost!','color':'red'};
+  }else if(yourScore === 0.5){
+      return {'message':'you tied!','color':'yellow'};
+  }else{
+      return{'message':'you win!','color':'green'};
+  }
+}
+
+function rpsFrontEnd(humanChoice,botChoice,finalMessage){
+    var imagesDatabase = {
+      'rock': 'IMAGES/rock.jpg',
+      'paper':document.getElementById("paper").style.src,
+      'scissor':document.getElementById("scissor").style.src
+    }
+    console.log(humanChoice.id);
+
+   //let's remove all the images
+   document.getElementById('rock').remove();
+   document.getElementById('paper').remove();
+   document.getElementById('scissor').remove();
+
+   var humanDiv = document.createElement('div');
+   var botDiv = document.createElement('div');
+   var messageDiv = document.createElement('div');
+
+   humanDiv.innerHTML = "<img src="+imagesDatabase[humanChoice]+">";
+   document.getElementById('flex-box-rps-div').appendChild(humanDiv);
 }
