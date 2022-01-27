@@ -23,3 +23,6 @@ text-align:center;
 .flex-box-rps img:hover{
   box-shadow: 0 10px 50px rgb(46, 34, 156);
 }
+.botChoice-img :hover{
+  box-shadow:  0px 10px 50px rgba(243, 38, 24, 1);
+}

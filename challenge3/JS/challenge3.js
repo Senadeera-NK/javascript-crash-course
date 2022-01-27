@@ -43,11 +43,12 @@ function finalMessage([yourScore,computerScore]){
 
 function rpsFrontEnd(humanChoice,botChoice,finalMessage){
     var imagesDatabase = {
-      'rock': 'IMAGES/rock.jpg',
-      'paper':document.getElementById("paper").style.src,
-      'scissor':document.getElementById("scissor").style.src
+      'rock': document.getElementById('rock').src,
+      'paper':document.getElementById("paper").src,
+      'scissor':document.getElementById("scissor").src
     }
-    console.log(humanChoice.id);
+    console.log("botChoice: "+botChoice);
+    console.log("humanChoice: "+humanChoice.id);
 
    //let's remove all the images
    document.getElementById('rock').remove();
@@ -58,6 +59,8 @@ function rpsFrontEnd(humanChoice,botChoice,finalMessage){
    var botDiv = document.createElement('div');
    var messageDiv = document.createElement('div');
 
-   humanDiv.innerHTML = "<img src="+imagesDatabase[humanChoice]+">";
+   humanDiv.innerHTML = "<img src="+imagesDatabase[humanChoice.id]+">";
    document.getElementById('flex-box-rps-div').appendChild(humanDiv);
+   botDiv.innerHTML = "<img class='botChoice-img' src="+imagesDatabase[botChoice]+">"
+   document.getElementById('flex-box-rps-div').appendChild(botDiv);
 }
