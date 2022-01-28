@@ -1,0 +1,54 @@
+body{
+  margin: 0;
+}
+
+.container-4{
+  border: 1px solid black;
+  width:75%;
+  margin:0 auto;
+  text-align: center;
+}
+
+.flex-box-pick-color{
+  display:flex;
+  border:1px solid black;
+  padding:10px;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+/*--------buttons----------*/
+.btn{
+  width:flex;
+  border-radius:5px;
+  padding:10px;
+  border:none;
+}
+.btn-primary{
+  background-color: rgb(10, 96, 255);
+  color: white;
+}
+.btn-primary:hover{
+  background-color: rgb(25, 92, 216);
+}
+.btn-danger{
+  background-color: rgb(253, 15, 15);
+  color: white;
+}
+.btn-danger:hover{
+  background-color: rgb(221, 13, 13);
+}
+.btn-warning{
+  background-color: yellow;
+  color: black;
+}
+.btn-warning:hover{
+  background-color: rgb(211, 211, 2);
+}
+.btn-success{
+  background-color: rgb(12, 184, 12);
+  color: white;
+}
+.btn-success:hover{
+  background-color: green;
+}

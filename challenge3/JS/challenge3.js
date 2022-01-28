@@ -59,8 +59,13 @@ function rpsFrontEnd(humanChoice,botChoice,finalMessage){
    var botDiv = document.createElement('div');
    var messageDiv = document.createElement('div');
 
-   humanDiv.innerHTML = "<img src="+imagesDatabase[humanChoice.id]+">";
+   humanDiv.innerHTML = "<img src='"+imagesDatabase[humanChoice.id]+"' style='box-shadow: 0 10px 50px rgb(46, 34, 156);'>";
    document.getElementById('flex-box-rps-div').appendChild(humanDiv);
-   botDiv.innerHTML = "<img class='botChoice-img' src="+imagesDatabase[botChoice]+">"
+
+   messageDiv.innerHTML = "<h1 style='color: "+finalMessage['color']+";'>"+finalMessage['message']+"</h1>"
+   document.getElementById('flex-box-rps-div').appendChild(messageDiv);
+
+   botDiv.innerHTML = "<img src='"+imagesDatabase[botChoice]+"' style='box-shadow: 0px 10px 50px rgba(243, 38, 24 ,1);'>"
    document.getElementById('flex-box-rps-div').appendChild(botDiv);
+
 }
