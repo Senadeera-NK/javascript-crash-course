@@ -1,14 +1,37 @@
 body{
   margin: 0;
 }
-.container-4{
+.container-5{
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+
+}
+.flex-blackjack-row-1,.flex-blackjack-row-2{
   display: flex;
-
+  flex-wrap: wrap;
+  flex-direction:row; /*this guides 'you:0','dealer:0' to make it in one line*/
+  padding: 10px;
+  justify-content: space-around;
+  border:1px solid black;
 }
+
 .flex-blackjack-row-1{
+  background-image: url('../IMAGES/background.jpg');
+  color:#ffffff;
+}
+.flex-blackjack-row-3{
 
 }
-.flex-blackjack-row-2{
+
+table{
+
+}
+table tr{
+
+}
+table td{
 
 }
 
